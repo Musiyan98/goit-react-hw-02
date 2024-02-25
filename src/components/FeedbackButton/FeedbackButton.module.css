@@ -1,26 +1,24 @@
-.container {
-   margin-bottom: 50px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+.button {
+   margin: 10px;
+background-color: #cfcfcf;
 }
 
-.title {
-   font-size: 50px;
-   line-height: (80px / 50px);
-   font-weight: 700;
-   letter-spacing: 0.06em;
-   font-family: Roboto + "," + sans-serif;
-   margin-bottom: 20px;
-   justify-content: center;
+.good {
+   composes: button;
+   background-color: #4ee14e;
 }
 
-.description {
-   font-size: 20px;
-   line-height: (36px / 20px);
-   font-weight: 700;
-   letter-spacing: 0.06em;
-   font-family: Roboto + "," + sans-serif;
+.neutral {
+   composes: button;
+   background-color: yellow;
+}
 
-   max-width: 70%;
+.bad {
+   composes: button;
+   background-color: #ff8a8a;
+}
+
+.reset {
+   composes: button;
+   background-color: #e0e0e0;
 }

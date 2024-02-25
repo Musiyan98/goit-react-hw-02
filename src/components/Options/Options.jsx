@@ -1,4 +1,4 @@
-// import css from './Feedback.module.css';
+// import css from './Options.module.css';
 import FeedbackButton from '../FeedbackButton/FeedbackButton';
 
 const Options = ({ feedbackRates, setfeedbackRates, isRates }) => {
@@ -30,10 +30,18 @@ const Options = ({ feedbackRates, setfeedbackRates, isRates }) => {
   };
   return (
     <div>
-      <FeedbackButton changeTypeRate={changeGoodRates} nameRate={'Good'} />
-      <FeedbackButton changeTypeRate={changeNeutralRates} nameRate={'Neutral'} />
-      <FeedbackButton changeTypeRate={changeBadRates} nameRate={'Bad'} />
-      <FeedbackButton changeTypeRate={resetRates} nameRate={'Reset'} isEnabled={!isRates} />
+      <FeedbackButton className={'good'} changeTypeRate={changeGoodRates} nameRate={'Good'} />
+      <FeedbackButton
+        className={'neutral'}
+        changeTypeRate={changeNeutralRates}
+        nameRate={'Neutral'}
+      />
+      <FeedbackButton className={'bad'} changeTypeRate={changeBadRates} nameRate={'Bad'} />
+      {isRates ? (
+        <FeedbackButton className={'reset'} changeTypeRate={resetRates} nameRate={'Reset'} />
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
